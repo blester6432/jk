@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 
@@ -14,5 +15,5 @@ async def on_ready():
 async def hi(ctx):
     await ctx.send("Hi!")
 
-# Replace 'YOUR_BOT_TOKEN' with your actual bot token
-bot.run('YOUR_BOT_TOKEN')
+# Use token from Railway environment variable
+bot.run(os.environ['TOKEN'])
